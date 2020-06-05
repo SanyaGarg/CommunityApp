@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register_MobileNo">
+
+    <TextView
+        android:id="@+id/mobile_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="230dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:hint="@string/no"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/init"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mobile_no"
+        android:layout_alignBaseline="@id/mobile_text"
+        android:layout_marginStart="20dp"
+        android:fontFamily="sans-serif"
+        android:hint="+91"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/mobile_text"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mobile_no"
+        android:layout_centerHorizontal="true"
+        android:autofillHints=""
+        android:fontFamily="sans-serif-medium"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="420dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/Next"
+        android:textColorHint="#F3F1F1" />
+
+</RelativeLayout>

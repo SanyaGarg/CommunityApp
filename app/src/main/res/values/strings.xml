@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CommuntiyApp</string>
+    <string name="Name">Name</string>
+    <string name="NameQ">What\'s your Name?</string>
+    <string name="FirstName">First Name</string>
+    <string name="LastName">Last Name</string>
+    <string name="Next">NEXT</string>
+    <string name="DOB">Date of Birth</string>
+    <string name="no">Enter your Mobile Number</string>
+    <string name="password">Enter Password</string>
+    <string name="password_text">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="Register">Register</string>
+</resources>
