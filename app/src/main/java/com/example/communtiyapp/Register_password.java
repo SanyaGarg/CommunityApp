@@ -38,7 +38,7 @@ public class Register_password extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_password);
 
-        Button btnRegister = (Button) findViewById(R.id.button);
+        btnRegister = (Button) findViewById(R.id.button);
         etPassword = findViewById(R.id.confirm_password);
         newPassword = findViewById(R.id.password_text);
         tv = findViewById(R.id.tv);

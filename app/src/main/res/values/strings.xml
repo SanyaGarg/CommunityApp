@@ -11,4 +11,8 @@
     <string name="password_text">Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="Register">Register</string>
+    <string name="OTP">Enter OTP</string>
+    <string name="OTP_text">4 digits</string>
+    <string name="OK">OK</string>
+
 </resources>

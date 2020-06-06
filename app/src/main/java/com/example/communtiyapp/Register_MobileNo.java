@@ -16,14 +16,6 @@ public class Register_MobileNo extends AppCompatActivity {
     public static final String EXTRA_DATE= "com.example.communtiyapp.EXTRA_DATE";
     public static final String EXTRA_FNAME= "com.example.communtiyapp.EXTRA_NAME";
 
-    public String getMobile_no() {
-        return mobile_no;
-    }
-
-    public void setMobile_no(String mobile_no) {
-        this.mobile_no = mobile_no;
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
