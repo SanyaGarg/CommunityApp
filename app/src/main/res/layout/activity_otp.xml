@@ -7,7 +7,7 @@
     tools:context=".Register_OTP">
 
     <TextView
-        android:id="@+id/mobile_no"
+        android:id="@+id/otp_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -18,10 +18,10 @@
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/mobile_text"
+        android:id="@+id/otp_no"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/mobile_no"
+        android:layout_below="@id/otp_text"
         android:layout_centerHorizontal="true"
         android:autofillHints=""
         android:fontFamily="sans-serif-medium"
@@ -30,7 +30,7 @@
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/OK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

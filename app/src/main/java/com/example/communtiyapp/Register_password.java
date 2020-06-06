@@ -50,8 +50,6 @@ public class Register_password extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                //final String LOG_TAG = Register_password.class.getSimpleName();
-
                 if (password.equals(secret)) {
                     check();
                 } else {
@@ -64,8 +62,8 @@ public class Register_password extends AppCompatActivity {
     public void check(){
 
         Intent intent = getIntent();
-        final String Name = intent.getStringExtra(Register_MobileNo.EXTRA_FNAME);
-        final String date = intent.getStringExtra(Register_MobileNo.EXTRA_DATE);
+        //final String Name = intent.getStringExtra(Register_MobileNo.EXTRA_FNAME);
+        //final String date = intent.getStringExtra(Register_MobileNo.EXTRA_DATE);
         final String number = intent.getStringExtra(Register_MobileNo.EXTRA_Mobile);
 
 
@@ -74,10 +72,7 @@ public class Register_password extends AppCompatActivity {
         String url = "http://0a5f9a327ab4.ngrok.io/users/reg";
 
         try{
-            jsonObject.put("name",Name);
             jsonObject.put("mobileNo",number);
-            jsonObject.put("dob",date);
-            jsonObject.put("password",secret);
         }catch(JSONException e){
             Toast.makeText(this,"Error",Toast.LENGTH_LONG).show();
             e.printStackTrace();
