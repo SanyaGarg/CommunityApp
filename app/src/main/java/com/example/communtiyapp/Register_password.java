@@ -71,7 +71,7 @@ public class Register_password extends AppCompatActivity {
 
         String secret = etPassword.getText().toString();
         JSONObject jsonObject = new JSONObject();
-        String url = "http://745eb907e1c4.ngrok.io/users/reg";
+        String url = "http://0a5f9a327ab4.ngrok.io/users/reg";
 
         try{
             jsonObject.put("name",Name);
@@ -84,7 +84,7 @@ public class Register_password extends AppCompatActivity {
         }
 
         final OkHttpClient client = new OkHttpClient();
-        MediaType JSON = MediaType.parse("application/json,charset=utf-8");
+        MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 
         RequestBody body = RequestBody.create(jsonObject.toString(),JSON);
         final Request request = new Request.Builder()
@@ -122,6 +122,7 @@ public class Register_password extends AppCompatActivity {
 
             @Override
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                e.printStackTrace();
             }
 
         });

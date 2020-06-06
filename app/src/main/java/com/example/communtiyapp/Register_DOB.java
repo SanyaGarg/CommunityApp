@@ -66,7 +66,7 @@ public class Register_DOB extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int day) {
                 month += 1;
-                date = month + "/" + day + "/" + year;
+                date = year + "-" + month + "-" + day;
                 etDate.setText(date);
             }
 
