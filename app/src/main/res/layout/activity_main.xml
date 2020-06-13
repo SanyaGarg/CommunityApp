@@ -1,93 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="230dp"
-        android:fontFamily="sans-serif"
-        android:gravity="center"
-        android:hint="@string/Name"
-        android:text="@string/NameQ"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/FirstName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@id/et_name"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginEnd="30dp"
-        android:fontFamily="sans-serif"
-        android:hint="@string/Name"
-        android:text="@string/FirstName"
-        android:textSize="20sp" />
+    tools:context=".login.MainActivity">
 
     <EditText
-
-        android:id="@+id/et_name"
-        android:layout_width="144dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/FirstName"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="220dp"
-        android:layout_marginBottom="15dp"
-        android:autofillHints="@string/FirstName"
-        android:ellipsize="start"
-        android:fontFamily="sans-serif"
-
-        android:hint="@string/FirstName"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/LastName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginEnd="220dp"
-        android:fontFamily="sans-serif"
-        android:hint="@string/Name"
-        android:text="@string/LastName"
-        android:textSize="20sp" />
-
-
-    <EditText
-
-        android:id="@+id/last_name"
-        android:layout_width="145dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/LastName"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="50dp"
-        android:autofillHints="@string/LastName"
-        android:fontFamily="sans-serif"
-        android:hint="@string/LastName"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textSize="20sp" />
+        android:id="@+id/phone"
+        android:layout_width="235dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/round_corners"
+        android:ems="10"
+        android:hint="@string/phone_no"
+        android:inputType="phone"
+        android:paddingStart="20dp"
+        android:textColor="#155BC6"
+        android:textColorHighlight="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        android:importantForAutofill="no" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/log__in"
+        android:layout_width="209dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_buttons"
+        android:text="@string/log_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/log_in_otp"
+        android:layout_width="151dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/rounded_buttons"
+        android:backgroundTintMode="multiply"
+        android:text="@string/log_in_with_otp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/forgot_password"
+        android:layout_width="151dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="176dp"
+        android:background="#24CA2B"
+        android:text="@string/forgot_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="235dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/round_corners"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingStart="20dp"
+        android:textColor="#155BC6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <Button
+        android:id="@+id/SignUp"
+        android:layout_width="151dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="230dp"
+        android:background="#24CA2B"
+        android:text="@string/sign_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="420dp"
-        android:fontFamily="sans-serif"
-        android:text="@string/Next"
-        android:textColorHint="#F3F1F1" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.3" />
 
-</RelativeLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

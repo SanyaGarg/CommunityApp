@@ -1,4 +1,4 @@
-package com.example.communtiyapp;
+package com.example.communityapp.register;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,14 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.communityapp.R;
 
 public class Register_MobileNo extends AppCompatActivity {
 
     String mobile_no;
 
-    public static final String EXTRA_Mobile= "com.example.communtiyapp.EXTRA_Mobile";
-    public static final String EXTRA_DATE= "com.example.communtiyapp.EXTRA_DATE";
-    public static final String EXTRA_FNAME= "com.example.communtiyapp.EXTRA_NAME";
+    public static final String EXTRA_Mobile= "com.example.communityapp.EXTRA_Mobile";
+    public static final String EXTRA_DATE= "com.example.communityapp.EXTRA_DATE";
+    public static final String EXTRA_FNAME= "com.example.communityapp.EXTRA_NAME";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,7 @@ public class Register_MobileNo extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mobile_no = no.getText().toString();
+
                 Intent myIntent = new Intent(view.getContext(), Register_password.class);
                 myIntent.putExtra(EXTRA_Mobile,mobile_no);
                 myIntent.putExtra(EXTRA_DATE,dob);
@@ -41,5 +45,9 @@ public class Register_MobileNo extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void error(){
+        Toast.makeText(this,"Please enter your Mobile Number.",Toast.LENGTH_LONG).show();
     }
 }

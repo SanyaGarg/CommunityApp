@@ -1,4 +1,4 @@
-package com.example.communtiyapp;
+package com.example.communityapp.register;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +13,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.communityapp.R;
+
 import java.util.Calendar;
 
 public class Register_DOB extends AppCompatActivity {
@@ -20,8 +22,8 @@ public class Register_DOB extends AppCompatActivity {
 
     String date;
 
-    public static final String EXTRA_DOB= "com.example.communtiyapp.EXTRA_DOB";
-    public static final String EXTRA_NAME= "com.example.communtiyapp.EXTRA_NAME";
+    public static final String EXTRA_DOB= "com.example.communityapp.EXTRA_DOB";
+    public static final String EXTRA_NAME= "com.example.communityapp.EXTRA_NAME";
 
     private EditText etDate;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
@@ -37,7 +39,7 @@ public class Register_DOB extends AppCompatActivity {
         setContentView(R.layout.activity_dob);
 
         Intent intent = getIntent();
-        final String Name = intent.getStringExtra(MainActivity.EXTRA_TEXT);
+        final String Name = intent.getStringExtra(Register_name.EXTRA_TEXT);
 
         etDate = findViewById(R.id.birth_date);
         btnNext = (Button) findViewById(R.id.button);

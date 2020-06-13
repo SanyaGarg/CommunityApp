@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register_OTP">
+    tools:context="com.example.communityapp.register.Register_OTP">
 
     <TextView
         android:id="@+id/otp_text"

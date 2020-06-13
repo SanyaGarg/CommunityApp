@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CommuntiyApp</string>
+    <string name="app_name">CommunityApp</string>
     <string name="Name">Name</string>
     <string name="NameQ">What\'s your Name?</string>
     <string name="FirstName">First Name</string>
@@ -14,5 +14,17 @@
     <string name="OTP">Enter OTP</string>
     <string name="OTP_text">4 digits</string>
     <string name="OK">OK</string>
+    <string name="phone_no">phone no.</string>
+    <string name="log_in">Log In</string>
+    <string name="log_in_with_otp">Log In with OTP</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_the_registered_phone_number_to_recieve_notp">Enter the registered phone number to recieve\nOTP</string>
+    <string name="Continue">continue</string>
+    <string name="registered_number">Enter your registered number</string>
+    <string name="verify_your_number">Verify your number</string>
+    <string name="button">Button</string>
+    <string name="new_password">Enter OTP received and new password</string>
+    <string name="init">+91</string>
 
 </resources>

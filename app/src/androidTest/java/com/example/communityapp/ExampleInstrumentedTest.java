@@ -1,4 +1,4 @@
-package com.example.communtiyapp;
+package com.example.communityapp;
 
 import android.content.Context;
 
