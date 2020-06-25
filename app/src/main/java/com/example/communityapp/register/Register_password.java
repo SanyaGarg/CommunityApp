@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.communityapp.R;
+import com.example.communityapp.login.MainActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,10 +35,10 @@ public class Register_password extends AppCompatActivity {
     Button btnRegister;
     TextView tv;
 
-    public static final String EXTRA_NUMBER= "com.example.communityapp.EXTRA_NUMBER";
-    public static final String EXTRA_PASSWORD= "com.example.communityapp.EXTRA_PASSWORD";
-    public static final String EXTRA_DATE= "com.example.communityapp.EXTRA_DATE";
-    public static final String EXTRA_NAME= "com.example.communityapp.EXTRA_NAME";
+    public static final String EXTRA_NUMBER= "com.example.communityapp.register.EXTRA_NUMBER";
+    public static final String EXTRA_PASSWORD= "com.example.communityapp.register.EXTRA_PASSWORD";
+    public static final String EXTRA_DATE= "com.example.communityapp.register.EXTRA_DATE";
+    public static final String EXTRA_NAME= "com.example.communityapp.register.EXTRA_NAME";
 
 
     @Override
@@ -52,17 +53,17 @@ public class Register_password extends AppCompatActivity {
 
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 String password = newPassword.getText().toString();
                 String pass = etPassword.getText().toString();
                 if (password.equals(pass)) {
-                    Intent myIntent = new Intent(view.getContext(), Register_OTP.class);
                     Intent intent = getIntent();
                     String Name = intent.getStringExtra(Register_MobileNo.EXTRA_FNAME);
                     String date = intent.getStringExtra(Register_MobileNo.EXTRA_DATE);
                     String number = intent.getStringExtra(Register_MobileNo.EXTRA_Mobile);
-                    check(myIntent,pass,number,Name,date);
+                    check(view,pass,number,Name,date);
                 } else {
                     reEnterPassword();
                 }
@@ -70,11 +71,11 @@ public class Register_password extends AppCompatActivity {
         });
     }
 
-    public void check(final Intent myIntent, final String pass,final String number,final String Name,final String date){
+    public void check(final View view, final String pass,final String number,final String Name,final String date){
 
         //String secret = etPassword.getText().toString();
         JSONObject jsonObject = new JSONObject();
-        String url = "http://1cdd787fb2da.ngrok.io/users/register";
+        String url = "https://community-ebh.herokuapp.com/users/register";
 
         try{
             jsonObject.put("mobileNo",number);
@@ -101,7 +102,7 @@ public class Register_password extends AppCompatActivity {
                         @Override
                         public void run() {
                             success();
-
+                            Intent myIntent = new Intent(view.getContext(), Register_OTP.class);
                             myIntent.putExtra(EXTRA_NUMBER,number);
                             myIntent.putExtra(EXTRA_DATE,date);
                             myIntent.putExtra(EXTRA_NAME,Name);
@@ -114,6 +115,8 @@ public class Register_password extends AppCompatActivity {
                     Register_password.this.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
+                            Intent intent = new Intent(view.getContext(), MainActivity.class);
+                            startActivity(intent);
                             alreadyRegistered();
                         }
                     });

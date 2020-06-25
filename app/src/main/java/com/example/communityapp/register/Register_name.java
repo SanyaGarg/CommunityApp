@@ -14,7 +14,7 @@ import com.example.communityapp.R;
 public class Register_name extends AppCompatActivity {
 
     String name;
-    public static final String EXTRA_TEXT= "com.example.communityapp.EXTRA_TEXT";
+    public static final String EXTRA_TEXT= "com.example.communityapp.register.EXTRA_TEXT";
 
 
     public String getName(){

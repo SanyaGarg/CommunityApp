@@ -27,6 +27,7 @@ import okhttp3.Response;
 
 public class enter_number extends AppCompatActivity {
 
+    String token;
     Button next;
     EditText phone;
     public static final String EXTRA_TEXT= "com.example.communityapp.login.enter_number.EXTRA_TEXT";
@@ -63,7 +64,7 @@ public class enter_number extends AppCompatActivity {
         {
 
             JSONObject jsonObject = new JSONObject();
-            String url = "http://4c3b5f005da5.ngrok.io/users/loginotp";
+            String url = "https://community-ebh.herokuapp.com/users/loginotp";
             //Toast.makeText(this,"yo",Toast.LENGTH_LONG).show();
             try {
                 jsonObject.put("mobileNo", num);
@@ -104,7 +105,7 @@ public class enter_number extends AppCompatActivity {
                         });
 
 
-                        String token;
+
                         try {
                             JSONObject reader = new JSONObject(response.body().string());
                             token = reader.getString("token");

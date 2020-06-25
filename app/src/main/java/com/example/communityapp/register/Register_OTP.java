@@ -73,7 +73,7 @@ public class Register_OTP extends AppCompatActivity {
                         .url(url)
                         .post(body)
                         .build();
-
+                final Intent myIntent = new Intent(view.getContext(), MainActivity.class);
                 client.newCall(request).enqueue(new Callback(){
                     @Override
                     public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
@@ -83,6 +83,7 @@ public class Register_OTP extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     success();
+                                    startActivity(myIntent);
                                 }
                             });
                         } else if (responseCode == 401) {
@@ -109,8 +110,7 @@ public class Register_OTP extends AppCompatActivity {
 
                 });
 
-                Intent myIntent = new Intent(view.getContext(), MainActivity.class);
-                startActivity(myIntent);
+
             }
         });
 

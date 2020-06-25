@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/share"
+        android:iconTint="#000"
+        android:title=""
+        >
+    </item>
+
+    <item
+        android:id="@+id/community"
+        android:icon="@drawable/group"
+        android:iconTint="#000"
+        android:title=""
+        >
+    </item>
+
+    <item
+        android:id="@+id/meetings"
+        android:icon="@drawable/meetings"
+        android:iconTint="#000"
+        android:title=""
+        >
+    </item>
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/myprofile"
+        android:iconTint="#000"
+        android:title="">
+    </item>
+</menu>

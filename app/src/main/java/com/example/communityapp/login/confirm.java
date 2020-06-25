@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.communityapp.R;
+import com.example.communityapp.wall.Wall;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
@@ -29,7 +30,9 @@ public class confirm extends AppCompatActivity {
 
     Button next;
     EditText phone;
+    String token;
     public static final String EXTRA_TEXT= "com.example.communityapp.login.EXTRA_TEXT";
+    public static final String EXTRA_TOKEN= "com.example.communityapp.login.EXTRA_TOKEN";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +46,13 @@ public class confirm extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validate();
+                validate(v);
             }
         });
     }
 
 
-    public void validate()
+    public void validate(final View v)
     {
         String num = phone.getText().toString().trim();
         if(num.length()==0)
@@ -74,7 +77,7 @@ public class confirm extends AppCompatActivity {
         {
 
             JSONObject jsonObject = new JSONObject();
-            String url = "http://648959ac1e85.ngrok.io/users/loginotp";
+            String url = "https://community-ebh.herokuapp.com/users/loginotp";
             //Toast.makeText(this,"yo",Toast.LENGTH_LONG).show();
             try {
                 jsonObject.put("mobileNo", num);
@@ -88,7 +91,7 @@ public class confirm extends AppCompatActivity {
             final OkHttpClient client = new OkHttpClient();
             MediaType JSON = MediaType.parse("application/json; charset=utf-8");
             // put your json here
-            RequestBody body = RequestBody.create(JSON, jsonObject.toString());
+            RequestBody body = RequestBody.create(jsonObject.toString(),JSON);
             final Request request = new Request.Builder()
                     .url(url)
                     .post(body)
@@ -103,7 +106,7 @@ public class confirm extends AppCompatActivity {
                 }
 
                 @Override
-                public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                public void onResponse(@NotNull Call call, @NotNull final Response response) throws IOException {
                     int responseCode = response.code();
                     if(responseCode==200)
                     {
@@ -111,18 +114,8 @@ public class confirm extends AppCompatActivity {
                             @Override
                             public void run() {
                                 sent();
-                            }
-                        });
-
-
-                        String token;
-                        try {
-                            JSONObject reader = new JSONObject(response.body().string());
-                            token = reader.getString("token");
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-
+                                }
+                            });
                     }
 
                     else if(responseCode==401)

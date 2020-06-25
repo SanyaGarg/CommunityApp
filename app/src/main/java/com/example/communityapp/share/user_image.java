@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.communityapp.R;
+
 public class user_image extends AppCompatActivity {
 
     @Override

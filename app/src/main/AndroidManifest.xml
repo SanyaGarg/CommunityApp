@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.communityapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +15,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".wall.Wall"/>
+        <activity android:name=".wall.Post"/>
+        <activity android:name=".share.Share" />
+        <activity android:name=".share.user_video_view" />
+        <activity android:name=".share.user_video" />
+        <activity android:name=".share.user_image_view" />
+        <activity android:name=".share.user_image" />
+        <activity
+            android:name=".wall.Wall" />
         <activity android:name=".register.Register_OTP" />
         <activity
             android:name=".register.Register_password"
@@ -26,10 +35,14 @@
             android:parentActivityName=".register.Register_name" />
         <activity android:name=".register.Register_name" />
         <activity android:name=".login.reset_password" />
-        <activity android:name=".login.otp_screen" />
+        <activity
+            android:name=".login.otp_screen"
+            android:parentActivityName="login.confirm" />
         <activity android:name=".login.enter_number" />
         <activity android:name=".login.confirm" />
-        <activity android:name=".login.MainActivity">
+        <activity android:name=".login.MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

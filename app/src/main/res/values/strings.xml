@@ -26,5 +26,10 @@
     <string name="button">Button</string>
     <string name="new_password">Enter OTP received and new password</string>
     <string name="init">+91</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Share_fragment">Share fragment</string>
+    <string name="comments">comment</string>
+    <string name="likes">likes</string>
 
 </resources>

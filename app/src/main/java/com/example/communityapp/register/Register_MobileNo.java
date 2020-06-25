@@ -15,9 +15,9 @@ public class Register_MobileNo extends AppCompatActivity {
 
     String mobile_no;
 
-    public static final String EXTRA_Mobile= "com.example.communityapp.EXTRA_Mobile";
-    public static final String EXTRA_DATE= "com.example.communityapp.EXTRA_DATE";
-    public static final String EXTRA_FNAME= "com.example.communityapp.EXTRA_NAME";
+    public static final String EXTRA_Mobile= "com.example.communityapp.register.EXTRA_Mobile";
+    public static final String EXTRA_DATE= "com.example.communityapp.register.EXTRA_DATE";
+    public static final String EXTRA_FNAME= "com.example.communityapp.register.EXTRA_NAME";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

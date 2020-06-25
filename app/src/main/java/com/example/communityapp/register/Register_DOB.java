@@ -22,8 +22,8 @@ public class Register_DOB extends AppCompatActivity {
 
     String date;
 
-    public static final String EXTRA_DOB= "com.example.communityapp.EXTRA_DOB";
-    public static final String EXTRA_NAME= "com.example.communityapp.EXTRA_NAME";
+    public static final String EXTRA_DOB= "com.example.communityapp.register.EXTRA_DOB";
+    public static final String EXTRA_NAME= "com.example.communityapp.register.EXTRA_NAME";
 
     private EditText etDate;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
